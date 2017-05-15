@@ -4,7 +4,7 @@ import com.jaydenxiao.common.base.BaseFragment;
 import com.shouba.shouba.R;
 
 /**
- * des:瘦吧的分类的fragment
+ * des:瘦吧的分类的fragment  瘦吧圈
  * Created by syj
  * on 2017.05.09 10:30
  */
