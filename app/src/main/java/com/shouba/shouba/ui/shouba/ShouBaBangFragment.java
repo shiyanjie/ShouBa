@@ -8,7 +8,7 @@ import com.shouba.shouba.R;
  * Created by syj
  * on 2017.05.09 10:30
  */
-public class ShouBaFragment extends BaseFragment{
+public class ShouBaBangFragment extends BaseFragment{
 
     @Override
     protected int getLayoutResource() {

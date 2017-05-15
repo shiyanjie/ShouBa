@@ -14,7 +14,8 @@ import com.jaydenxiao.common.base.BaseFragmentAdapter;
 import com.shouba.shouba.R;
 import com.shouba.shouba.bean.ShouBaChannelTable;
 import com.shouba.shouba.db.ShouBaChannelTableManager;
-import com.shouba.shouba.ui.shouba.ShouBaFragment;
+import com.shouba.shouba.ui.shouba.ShouBaBangFragment;
+import com.shouba.shouba.ui.shouba.ShouBaQuanFragment;
 import com.shouba.shouba.util.MyUtils;
 
 import java.util.ArrayList;
@@ -55,8 +56,9 @@ public class ShouBaMainFragment extends BaseFragment{
         List<Fragment> mNewsFragmentList = new ArrayList<>();
         for (int i = 0; i < shoubaChannelTableList.size(); i++) {
             channelNames.add(shoubaChannelTableList.get(i).getChannelName());
-            mNewsFragmentList.add(createListFragments(shoubaChannelTableList.get(i)));
         }
+        mNewsFragmentList.add(new ShouBaQuanFragment());
+        mNewsFragmentList.add(new ShouBaBangFragment());
         fragmentAdapter = new BaseFragmentAdapter(getChildFragmentManager(), mNewsFragmentList, channelNames);
         viewPager.setAdapter(fragmentAdapter);
         tabs.setupWithViewPager(viewPager);
@@ -83,13 +85,6 @@ public class ShouBaMainFragment extends BaseFragment{
         });
     }
 
-    private ShouBaFragment createListFragments(ShouBaChannelTable shouBaChannelTable) {
-        ShouBaFragment fragment = new ShouBaFragment();
-//        Bundle bundle = new Bundle();
-//        bundle.putString(AppConstant.VIDEO_TYPE, videoChannelTable.getChannelId());
-//        fragment.setArguments(bundle);
-        return fragment;
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
