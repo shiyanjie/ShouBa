@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--瘦吧频道-->
+    <string-array name="shouba_channel_name">
+        <item>瘦吧圈</item>
+        <item>瘦吧榜</item>
+    </string-array>
+    <string-array name="shouba_channel_id">
+        <item>V9LG4B3A0</item>
+        <item>V9LG4E6VR</item>
+    </string-array>
+</resources>

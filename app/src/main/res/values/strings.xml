@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- main -->
+    <string name="app_name">瘦吧</string>
+
+    <!-- 首页 -->
+    <string name="home_main_title">首页</string>
+
+    <!-- 瘦吧 -->
+    <string name="shouba_main_title">瘦吧</string>
+
+    <!-- 商城 -->
+    <string name="store_main_title">商城</string>
+
+    <!-- 我的 -->
+    <string name="about">关于</string>
+    <string name="mine_main_title">我的</string>
+</resources>
