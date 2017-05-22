@@ -17,8 +17,8 @@ import com.jaydenxiao.common.base.BaseFragmentAdapter;
 import com.shouba.shouba.R;
 import com.shouba.shouba.bean.ShouBaChannelTable;
 import com.shouba.shouba.db.ShouBaChannelTableManager;
-import com.shouba.shouba.ui.shouba.ShouBaBangFragment;
-import com.shouba.shouba.ui.shouba.ShouBaQuanFragment;
+import com.shouba.shouba.ui.shouba.fragment.ShouBaBangFragment;
+import com.shouba.shouba.ui.shouba.fragment.ShouBaQuanFragment;
 import com.shouba.shouba.util.MyUtils;
 
 import java.lang.reflect.Field;

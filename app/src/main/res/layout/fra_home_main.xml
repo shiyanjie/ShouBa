@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    android:clipToPadding="true">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -14,27 +13,154 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:title="@string/home_main_title" />
 
-    <ScrollView
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="248dp"
+        android:layout_marginTop="@dimen/toolBarSize"
+        android:orientation="vertical">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/white"
+            app:layout_scrollFlags="scroll">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax">
+
+                <ImageView
+
+                    android:id="@+id/iv_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/stroe3" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/alpha_45_black" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_error_pic"
+                            android:layout_width="@dimen/error_icon_size"
+                            android:layout_height="@dimen/error_icon_size"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/shape_circle_error"
+                            android:padding="7dp">
+                            <TextView
+                                android:id="@+id/tv_ErrorMsg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:paddingBottom="4dp"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:paddingTop="4dp"
+                                android:text="下拉加载"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="@dimen/toolBarSize"
+            android:background="@color/white"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:id="@+id/radio_topbar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio0_all_province"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="人气最高"
+                    android:textColor="@drawable/selector_text_mendiantuijian_color"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="#cccccc" />
+
+                <RadioButton
+                    android:id="@+id/radio1_all_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="距离最近"
+                    android:textColor="@drawable/selector_text_mendiantuijian_color"
+                    android:textSize="14sp" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/home1"
-                android:scaleType="fitXY"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/home2"
-                android:scaleType="fitXY"/>
+                android:background="#cccccc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:drawableRight="@drawable/ic_arrow_to"
+                android:gravity="center"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="太原" />
         </LinearLayout>
-    </ScrollView>
+    </android.support.design.widget.AppBarLayout>
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white_alpha_half"
+            android:paddingLeft="150dp"
+            android:paddingRight="150dp"
+            android:text="石蛋，没办法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

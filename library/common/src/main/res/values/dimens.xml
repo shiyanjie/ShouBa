@@ -6,6 +6,8 @@
     <dimen name="gudieview_width">6dp</dimen>
     <dimen name="gudieview_heigh">6dp</dimen>
 
+    <dimen name="viewpadding_width">6dp</dimen>
+
     <!-- font -->
     <dimen name="font_tiny">10sp</dimen>
     <dimen name="font_small">12sp</dimen>
