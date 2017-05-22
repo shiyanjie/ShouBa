@@ -13,6 +13,21 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:title="@string/home_main_title" />
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white_alpha_half"
+            android:paddingLeft="150dp"
+            android:paddingRight="150dp"
+            android:text="石蛋，没办法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打" />
+
+    </android.support.v4.widget.NestedScrollView>
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="248dp"
@@ -56,10 +71,10 @@
 
                         <RelativeLayout
                             android:id="@+id/rl_error_pic"
-                            android:layout_width="@dimen/error_icon_size"
-                            android:layout_height="@dimen/error_icon_size"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
                             android:layout_centerHorizontal="true"
-                            android:background="@drawable/shape_circle_error"
+                            android:background="@drawable/shape_circle_home_tizhong"
                             android:padding="7dp">
                             <TextView
                                 android:id="@+id/tv_ErrorMsg"
@@ -147,20 +162,5 @@
                 android:text="太原" />
         </LinearLayout>
     </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/white_alpha_half"
-            android:paddingLeft="150dp"
-            android:paddingRight="150dp"
-            android:text="石蛋，没办法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打" />
-
-    </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>
