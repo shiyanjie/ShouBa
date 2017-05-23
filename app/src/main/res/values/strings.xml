@@ -5,6 +5,14 @@
 
     <!-- 首页 -->
     <string name="home_main_title">首页</string>
+    <string name="home_tizhong_lishi">历史</string>
+    <string name="home_tizhong_tizhong">体重</string>
+    <string name="home_tizhong_shangcijilu">上次记录</string>
+    <string name="home_tizhong_jilu">记录</string>
+    <string name="home_mendian_renqizuigao">人气最高</string>
+    <string name="home_mendian_julizuijin">距离最近</string>
+    <string name="home_mendian_locate">太原</string>
+    <string name="home_mendian_test">石蛋，没办法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打</string>
 
     <!-- 瘦吧 -->
     <string name="shouba_main_title">瘦吧</string>
@@ -21,4 +29,7 @@
     <string name="dingdan">订单</string>
     <string name="shezhi">设置</string>
     <string name="mine_main_title">我的</string>
+
+
+
 </resources>

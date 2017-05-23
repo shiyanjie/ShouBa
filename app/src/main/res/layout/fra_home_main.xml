@@ -65,7 +65,7 @@
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             android:paddingTop="4dp"
-                            android:text="历史"
+                            android:text="@string/home_tizhong_lishi"
                             android:textColor="@color/white"
                             android:textSize="@dimen/font_normal2" />
 
@@ -90,7 +90,7 @@
                                 android:paddingLeft="10dp"
                                 android:paddingRight="10dp"
                                 android:paddingTop="4dp"
-                                android:text="体重"
+                                android:text="@string/home_tizhong_tizhong"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/font_normal" />
 
@@ -121,7 +121,7 @@
                                 android:paddingLeft="10dp"
                                 android:paddingRight="10dp"
                                 android:paddingTop="4dp"
-                                android:text="上次记录"
+                                android:text="@string/home_tizhong_shangcijilu"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/font_normal" />
 
@@ -139,7 +139,7 @@
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             android:paddingTop="4dp"
-                            android:text="记录"
+                            android:text="@string/home_tizhong_jilu"
                             android:textColor="@color/white"
                             android:textSize="@dimen/font_normal2" />
                     </RelativeLayout>
@@ -170,7 +170,7 @@
                         android:checked="true"
                         android:gravity="center"
                         android:padding="6dp"
-                        android:text="人气最高"
+                        android:text="@string/home_mendian_renqizuigao"
                         android:textColor="@drawable/selector_text_mendiantuijian_color"
                         android:textSize="14sp" />
 
@@ -187,7 +187,7 @@
                         android:button="@null"
                         android:gravity="center"
                         android:padding="6dp"
-                        android:text="距离最近"
+                        android:text="@string/home_mendian_julizuijin"
                         android:textColor="@drawable/selector_text_mendiantuijian_color"
                         android:textSize="14sp" />
 
@@ -200,17 +200,17 @@
                     android:background="#cccccc" />
 
                 <TextView
+                    android:id="@+id/tv_locate"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_weight="1"
-                    android:drawablePadding="4dp"
-                    android:drawableRight="@drawable/ic_arrow_to"
+                    android:drawableRight="@drawable/ic_arrow_down"
                     android:ellipsize="end"
                     android:gravity="center"
                     android:maxLines="1"
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:text="太原" />
+                    android:text="@string/home_mendian_locate" />
             </LinearLayout>
         </android.support.design.widget.AppBarLayout>
 
@@ -223,9 +223,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/white_alpha_half"
-                android:paddingLeft="150dp"
-                android:paddingRight="150dp"
-                android:text="石蛋，没办法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打" />
+                android:paddingLeft="80dp"
+                android:paddingRight="80dp"
+                android:paddingBottom="200dp"
+                android:text="@string/home_mendian_test" />
 
         </android.support.v4.widget.NestedScrollView>
 
