@@ -12,6 +12,9 @@
     <!-- 商城 -->
     <string name="store_main_title">商城</string>
 
+    <!-- 服务 -->
+    <string name="service_main_title">服务</string>
+
     <!-- 我的 -->
     <string name="about">关于</string>
     <string name="jianzhongmubiao">减重目标</string>
