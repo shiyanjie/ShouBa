@@ -2,9 +2,11 @@
 <resources>
     <color name="colorPrimary">@color/main_color</color>
     <color name="colorPrimaryDark">@color/main_color</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#2fa881</color>
 
 
     <color name="label_text">#808080</color>
     <color name="subtitle_text">#8a8a8a</color>
+    <color name="textColorHint">#c5c5c5</color>
+    textColorHint
 </resources>

@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.jaydenxiao.common.base.BaseActivity;
 import com.shouba.shouba.R;
+import com.shouba.shouba.ui.login.activity.LoginActivity;
 
 import butterknife.Bind;
 
@@ -56,7 +57,7 @@ public class SplashActivity extends BaseActivity {
 
             @Override
             public void onAnimationEnd(Animator animator) {
-                MainActivity.startAction(SplashActivity.this);
+                LoginActivity.startAction(SplashActivity.this);
                 finish();
             }
 

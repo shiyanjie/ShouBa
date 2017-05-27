@@ -96,7 +96,7 @@
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
                         android:layout_weight="1"
-                        android:text="@string/order"
+                        android:text="@string/moulding"
                         android:textColor="?attr/dayNightTwoTextColor" />
 
                     <ImageView
@@ -136,7 +136,7 @@
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
                         android:layout_weight="1"
-                        android:text="@string/setting"
+                        android:text="@string/plaster"
                         android:textColor="?attr/dayNightTwoTextColor" />
 
                     <ImageView
@@ -193,7 +193,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/viewpadding_width"
                             android:layout_weight="1"
-                            android:text="@string/about"
+                            android:text="@string/moulding"
                             android:textColor="?attr/dayNightTwoTextColor" />
 
                         <TextView
@@ -201,7 +201,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/viewpadding_width"
                             android:layout_weight="1"
-                            android:text="@string/about"
+                            android:text="@string/to_store_service"
                             android:textColor="?attr/dayNightTwoTextColor" />
 
                     </LinearLayout>
