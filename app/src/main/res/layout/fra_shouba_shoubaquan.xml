@@ -34,6 +34,16 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/shoubaquan4"
                 android:scaleType="fitXY"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shoubaquan5"
+                android:scaleType="fitXY"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shoubaquan6"
+                android:scaleType="fitXY"/>
         </LinearLayout>
     </ScrollView>
 

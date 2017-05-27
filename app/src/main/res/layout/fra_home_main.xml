@@ -20,13 +20,13 @@
 
         <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="298dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <android.support.design.widget.CollapsingToolbarLayout
                 android:id="@+id/toolbar_layout"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="200dp"
                 android:background="@color/white"
                 app:layout_scrollFlags="scroll">
 
@@ -41,12 +41,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/stroe3" />
+                        android:src="@drawable/shoubaquan1" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/alpha_75_black" />
+                        android:background="@color/alpha_55_black" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -65,14 +65,15 @@
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             android:paddingTop="4dp"
-                            android:text="@string/home_tizhong_lishi"
+                            android:drawableRight="@drawable/ic_arrow_down"
+                            android:text="@string/weight_history"
                             android:textColor="@color/white"
                             android:textSize="@dimen/font_normal2" />
 
                         <RelativeLayout
                             android:id="@+id/rl_tizhong"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
                             android:layout_centerInParent="true"
                             android:background="@drawable/shape_circle_home_tizhong"
                             android:orientation="vertical"
@@ -90,24 +91,42 @@
                                 android:paddingLeft="10dp"
                                 android:paddingRight="10dp"
                                 android:paddingTop="4dp"
-                                android:text="@string/home_tizhong_tizhong"
+                                android:text="@string/weight_weight"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/font_normal" />
 
-                            <TextView
-                                android:id="@+id/tv_tizhong_show"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                            <RelativeLayout
+                                android:id="@+id/rl_tizhong_show"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_above="@+id/tv_tizhong_shangcijilu"
+                                android:layout_below="@+id/tv_tizhong"
                                 android:layout_centerInParent="true"
-                                android:gravity="center"
-                                android:paddingBottom="4dp"
-                                android:paddingLeft="10dp"
-                                android:paddingRight="10dp"
-                                android:paddingTop="4dp"
-                                android:text="56.9 kg"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/font_large"
-                                android:textStyle="bold" />
+                                android:padding="@dimen/viewpadding">
+
+                                <TextView
+                                    android:id="@+id/tv_tizhong_show"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_margin="2dp"
+                                    android:gravity="center"
+                                    android:text="56.9"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_large"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:layout_alignBottom="@+id/tv_tizhong_show"
+                                    android:layout_toRightOf="@+id/tv_tizhong_show"
+                                    android:gravity="center"
+                                    android:text="kg"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_small" />
+                            </RelativeLayout>
 
                             <TextView
                                 android:id="@+id/tv_tizhong_shangcijilu"
@@ -121,7 +140,7 @@
                                 android:paddingLeft="10dp"
                                 android:paddingRight="10dp"
                                 android:paddingTop="4dp"
-                                android:text="@string/home_tizhong_shangcijilu"
+                                android:text="@string/The_Last_Record"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/font_normal" />
 
@@ -139,7 +158,8 @@
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             android:paddingTop="4dp"
-                            android:text="@string/home_tizhong_jilu"
+                            android:text="@string/record"
+                            android:drawableRight="@drawable/ic_arrow_down"
                             android:textColor="@color/white"
                             android:textSize="@dimen/font_normal2" />
                     </RelativeLayout>
@@ -147,71 +167,15 @@
 
             </android.support.design.widget.CollapsingToolbarLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/toolBarSize"
-                android:background="@color/white"
-                android:orientation="horizontal">
+            <include
+                android:id="@+id/specialtyStore_tab"
+                layout="@layout/view_specialtystore_recommend_tab"
+                android:visibility="gone" />
 
-                <RadioGroup
-                    android:id="@+id/radio_topbar"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="3"
-                    android:orientation="horizontal">
+            <include
+                android:id="@+id/eat_tab"
+                layout="@layout/view_eat_tab" />
 
-                    <RadioButton
-                        android:id="@+id/radio0_mendian_renqizuigao"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:button="@null"
-                        android:checked="true"
-                        android:gravity="center"
-                        android:padding="6dp"
-                        android:text="@string/home_mendian_renqizuigao"
-                        android:textColor="@drawable/selector_text_mendiantuijian_color"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:layout_width="1dp"
-                        android:layout_height="wrap_content"
-                        android:background="#cccccc" />
-
-                    <RadioButton
-                        android:id="@+id/radio1_mendian_julizuijin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:padding="6dp"
-                        android:text="@string/home_mendian_julizuijin"
-                        android:textColor="@drawable/selector_text_mendiantuijian_color"
-                        android:textSize="14sp" />
-
-
-                </RadioGroup>
-
-                <TextView
-                    android:layout_width="1dp"
-                    android:layout_height="wrap_content"
-                    android:background="#cccccc" />
-
-                <TextView
-                    android:id="@+id/tv_locate"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="1"
-                    android:drawableRight="@drawable/ic_arrow_down"
-                    android:ellipsize="end"
-                    android:gravity="center"
-                    android:maxLines="1"
-                    android:paddingLeft="@dimen/activity_horizontal_margin"
-                    android:paddingRight="@dimen/activity_horizontal_margin"
-                    android:text="@string/home_mendian_locate" />
-            </LinearLayout>
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v4.widget.NestedScrollView
@@ -219,15 +183,24 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white_alpha_half"
-                android:paddingLeft="80dp"
-                android:paddingRight="80dp"
-                android:paddingBottom="200dp"
-                android:text="@string/home_mendian_test" />
+                android:orientation="vertical">
 
+                <include
+                    android:id="@+id/record"
+                    layout="@layout/view_record" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:paddingBottom="100dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/test" />
+            </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
 
     </android.support.design.widget.CoordinatorLayout>

@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#FF954E</color>
     <color name="colorAccent">#FA7C20</color>
     <!--白天主题-->
-    <color name="day_backgroup_color">#FFFFFFFF</color>
+    <color name="day_backgroup_color">@color/alpha_05_white</color>
     <color name="day_one_text_color">#FF000000</color>
     <color name="day_two_text_color">#c9000000</color>
     <color name="day_three_text_color">#8A9599</color>
@@ -42,7 +42,7 @@
     <color name="toast_white">#ffffff</color>
     <color name="toast_stroke_gray">#99d4d4d4</color>
 
-
+    <color name="alpha_02_white">#0AFFFFFF</color>
     <color name="alpha_05_white">#0DFFFFFF</color>
     <color name="alpha_10_white">#1AFFFFFF</color>
     <color name="alpha_15_white">#26FFFFFF</color>

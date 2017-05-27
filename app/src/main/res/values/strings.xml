@@ -5,14 +5,30 @@
 
     <!-- 首页 -->
     <string name="home_main_title">首页</string>
-    <string name="home_tizhong_lishi">历史</string>
-    <string name="home_tizhong_tizhong">体重</string>
-    <string name="home_tizhong_shangcijilu">上次记录</string>
-    <string name="home_tizhong_jilu">记录</string>
-    <string name="home_mendian_renqizuigao">人气最高</string>
-    <string name="home_mendian_julizuijin">距离最近</string>
-    <string name="home_mendian_locate">太原</string>
-    <string name="home_mendian_test">石蛋，没办法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打</string>
+    <string name="weight_history">05-27</string>
+    <string name="weight_weight">体重</string>
+    <string name="goal_weight">目标体重</string>
+    <string name="Need_to_eat">需摄入</string>
+    <string name="already_eat">已摄入</string>
+    <string name="The_Last_Record">上次记录</string>
+    <string name="record">记录</string>
+    <string name="Most_popular">人气最高</string>
+    <string name="the_shortest_distance">距离最近</string>
+    <string name="locate">太原</string>
+    <string name="recommend_today">今天吃什么?</string>
+    <string name="recommend">饮食推荐</string>
+    <string name="breakfast">早餐</string>
+    <string name="lunch">午餐</string>
+    <string name="supper">晚餐</string>
+    <string name="breakfast_suggest">早餐建议</string>
+    <string name="lunch_suggest">午餐建议</string>
+    <string name="supper_suggest">晚餐建议</string>
+    <string name="breakfast_already_eat">已摄入106k</string>
+    <string name="lunch__already_eat">已摄入156k</string>
+    <string name="supper__already_eat">已摄入196k</string>
+    <string name="test">石蛋，没办法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打法改啥都没做饭发了吗V领方面的这个破时事报告得到的，磨出风口是空洞积分高冬梅到地方，没办法了发哦吧，索拉卡吧女评估师，没法打</string>
+
+
 
     <!-- 瘦吧 -->
     <string name="shouba_main_title">瘦吧</string>
@@ -22,12 +38,18 @@
 
     <!-- 服务 -->
     <string name="service_main_title">服务</string>
+    <string name="to_store_service">到店服务</string>
+    <string name="moulding">塑性</string>
+    <string name="plaster">药贴</string>
+    <string name="shouba_The_official_mall">瘦吧官方商城</string>
+
 
     <!-- 我的 -->
     <string name="about">关于</string>
-    <string name="jianzhongmubiao">减重目标</string>
-    <string name="dingdan">订单</string>
-    <string name="shezhi">设置</string>
+    <string name="Weight_loss_goals">减重目标</string>
+    <string name="order">订单</string>
+    <string name="setting">设置</string>
+    <string name="user_info">个人资料</string>
     <string name="mine_main_title">我的</string>
 
 

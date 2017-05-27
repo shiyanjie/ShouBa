@@ -19,19 +19,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:src="@drawable/shoubangbang1" />
+                android:src="@drawable/shoubabang1" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:src="@drawable/shoubangbang2" />
+                android:src="@drawable/shoubabang2" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="fitXY"
-                android:src="@drawable/shoubangbang3" />
+                android:src="@drawable/shoubabang3" />
 
             <ImageView
                 android:layout_width="match_parent"

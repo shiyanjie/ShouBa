@@ -21,8 +21,8 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="4dp"
         android:layout_alignParentBottom="true"
+        android:paddingTop="4dp"
         tl:tl_indicator_height="0dp"
         tl:tl_iconHeight="20dp"
         tl:tl_iconWidth="20dp"
@@ -32,5 +32,5 @@
         tl:tl_textsize="12sp"
         tl:tl_underline_height="0dp"
         app:dayNightBackgroundAttr="dayNightBackground"
-        android:background="?attr/dayNightBackground"/>
+        android:background="@color/white"/>
 </RelativeLayout>

@@ -45,7 +45,7 @@
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_marginLeft="15dp"
-                        android:src="@drawable/toux2" />
+                        android:src="@drawable/shoubabang1" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
                         android:gravity="end"
-                        android:text="个人中心"
+                        android:text="@string/user_info"
                         android:textColor="?attr/dayNightTwoTextColor"
                         android:textSize="@dimen/font_normal3"
                         />
@@ -76,10 +76,10 @@
                     android:paddingTop="@dimen/viewpadding_width">
 
                     <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/about" />
+                        android:src="@mipmap/icon_shouye" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
                         android:layout_weight="1"
-                        android:text="@string/jianzhongmubiao"
+                        android:text="@string/Weight_loss_goals"
                         android:textColor="?attr/dayNightTwoTextColor" />
 
                     <ImageView
@@ -116,10 +116,10 @@
                     android:paddingTop="@dimen/viewpadding_width">
 
                     <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/about" />
+                        android:src="@mipmap/icon_shangcheng_selected" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
                         android:layout_weight="1"
-                        android:text="@string/dingdan"
+                        android:text="@string/order"
                         android:textColor="?attr/dayNightTwoTextColor" />
 
                     <ImageView
@@ -156,10 +156,10 @@
                     android:paddingTop="@dimen/viewpadding_width">
 
                     <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/about" />
+                        android:src="@mipmap/icon_pengyouquan_selected" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -168,7 +168,7 @@
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
                         android:layout_marginRight="@dimen/activity_horizontal_margin"
                         android:layout_weight="1"
-                        android:text="@string/shezhi"
+                        android:text="@string/setting"
                         android:textColor="?attr/dayNightTwoTextColor" />
 
                     <ImageView
@@ -197,10 +197,10 @@
                     android:paddingTop="@dimen/viewpadding_width">
 
                     <ImageView
-                        android:layout_width="38dp"
-                        android:layout_height="38dp"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                        android:src="@drawable/about" />
+                        android:src="@mipmap/icon_fuwu" />
 
                     <TextView
                         android:layout_width="wrap_content"
