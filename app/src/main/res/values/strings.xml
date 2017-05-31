@@ -39,7 +39,7 @@
     <!-- 服务 -->
     <string name="service_main_title">服务</string>
     <string name="to_store_service">到店服务</string>
-    <string name="moulding">塑性</string>
+    <string name="moulding">塑形</string>
     <string name="plaster">药贴</string>
     <string name="shouba_The_official_mall">瘦吧官方商城</string>
 
@@ -50,6 +50,7 @@
     <string name="order">订单</string>
     <string name="setting">设置</string>
     <string name="user_info">个人资料</string>
+    <string name="set_personal_data">个人资料设定</string>
     <string name="mine_main_title">我的</string>
 
     <string name="login">登录</string>

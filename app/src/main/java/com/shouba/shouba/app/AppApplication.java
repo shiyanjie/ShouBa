@@ -4,6 +4,8 @@ import com.jaydenxiao.common.baseapp.BaseApplication;
 import com.jaydenxiao.common.commonutils.LogUtils;
 import com.shouba.shouba.BuildConfig;
 
+import scaleruler.utils.DrawUtil;
+
 /**
  * APPLICATION
  */
@@ -13,5 +15,6 @@ public class AppApplication extends BaseApplication {
         super.onCreate();
         //初始化logger
         LogUtils.logInit(BuildConfig.LOG_DEBUG);
+        DrawUtil.resetDensity(this);
     }
 }

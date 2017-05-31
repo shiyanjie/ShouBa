@@ -18,7 +18,7 @@ import com.jaydenxiao.common.base.BaseActivity;
 import com.jaydenxiao.common.baseapp.AppManager;
 import com.shouba.shouba.R;
 import com.shouba.shouba.ui.login.activity.LoginActivity;
-import com.shouba.shouba.ui.main.activity.MainActivity;
+import com.shouba.shouba.ui.mine.activity.personalData.HeightAndWeightActivity;
 
 import butterknife.Bind;
 import butterknife.OnClick;
@@ -154,7 +154,7 @@ public class RegisterActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.bt_go:
                 AppManager.getAppManager().finishActivity(LoginActivity.class);
-                MainActivity.startAction(RegisterActivity.this);
+                HeightAndWeightActivity.startAction(RegisterActivity.this);
                 finish();
                 break;
             case R.id.cv_add:
