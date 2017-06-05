@@ -17,10 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.login.activity.LoginActivity"/>
-        <activity android:name=".ui.register.activity.RegisterActivity"/>
+        <activity android:name=".ui.loginAndRegister.activity.LoginActivity"/>
+        <activity android:name=".ui.loginAndRegister.activity.RegisterActivity"/>
         <activity android:name=".ui.main.activity.MainActivity"/>
         <activity android:name=".ui.mine.activity.personalData.HeightAndWeightActivity"/>
+        <activity android:name=".ui.mine.activity.personalData.SexAndAgeActivity"/>
     </application>
 
 </manifest>

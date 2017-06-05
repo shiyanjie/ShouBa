@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import butterknife.OnClick;
 import scaleruler.utils.DrawUtil;
 import scaleruler.view.DecimalScaleRulerView;
 import scaleruler.view.ScaleRulerView;
+
 
 /**
  * Created by zoubo on 16/3/16.
@@ -32,7 +34,7 @@ public class HeightAndWeightActivity extends AppCompatActivity {
     TextView mHeightValue;
 
     @Bind(R.id.scaleWheelView_weight)
-    ScaleRulerView mWeightWheelView;
+    DecimalScaleRulerView mWeightWheelView;
     @Bind(R.id.tv_user_weight_value)
     TextView mWeightValue;
 
@@ -82,7 +84,7 @@ public class HeightAndWeightActivity extends AppCompatActivity {
         }
 
         mHeightValue.setText((int) mHeight + "");
-        mWeightValue.setText(mWeight + "");
+        mWeightValue.setText(mWeight + "kg");
         mWeightValueTwo.setText(mWeight + "kg");
 
         mHeightWheelView.initViewParam(mHeight, mMaxHeight, mMinHeight);
@@ -94,11 +96,13 @@ public class HeightAndWeightActivity extends AppCompatActivity {
             }
         });
 
-        mWeightWheelView.initViewParam(mWeight, mMaxWeight, mMinWeight);
-        mWeightWheelView.setValueChangeListener(new ScaleRulerView.OnValueChangeListener() {
+        mWeightWheelView.setParam(DrawUtil.dip2px(10), DrawUtil.dip2px(32), DrawUtil.dip2px(24),
+                DrawUtil.dip2px(14), DrawUtil.dip2px(9), DrawUtil.dip2px(12));
+        mWeightWheelView.initViewParam(mWeight, 20.0f, 200.0f, 1);
+        mWeightWheelView.setValueChangeListener(new DecimalScaleRulerView.OnValueChangeListener() {
             @Override
             public void onValueChange(float value) {
-                mWeightValue.setText(value + "");
+                mWeightValueTwo.setText(value + "kg");
 
                 mWeight = value;
             }
@@ -118,11 +122,10 @@ public class HeightAndWeightActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick(R.id.btn_choose_result)
+    @OnClick(R.id.btn_choose_next)
     void onChooseResultClick() {
         Toast.makeText(this, "选择,身高： " + mHeight + " 体重： " + mWeight, Toast.LENGTH_LONG).show();
         MainActivity.startAction(HeightAndWeightActivity.this);
-        finish();
     }
 
 
@@ -131,4 +134,16 @@ public class HeightAndWeightActivity extends AppCompatActivity {
         super.onDestroy();
         ButterKnife.unbind(this);
     }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
 }

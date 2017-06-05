@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.jaydenxiao.common.base.BaseActivity;
 import com.shouba.shouba.R;
-import com.shouba.shouba.ui.login.activity.LoginActivity;
+import com.shouba.shouba.ui.loginAndRegister.activity.LoginActivity;
 
 import butterknife.Bind;
 

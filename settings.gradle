@@ -1,1 +1,1 @@
-include ':app', 'library:common', 'library:citypicker'
+include ':app', 'library:common', 'library:citypicker', 'library:flowlayouttags'
