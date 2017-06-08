@@ -22,6 +22,10 @@
         <activity android:name=".ui.main.activity.MainActivity"/>
         <activity android:name=".ui.mine.activity.personalData.HeightAndWeightActivity"/>
         <activity android:name=".ui.mine.activity.personalData.SexAndAgeActivity"/>
+        <activity android:name=".ui.mine.activity.personalData.LivingHabitsActivity"/>
+        <activity android:name=".ui.mine.activity.personalData.PersonalDataShowActivity"/>
+        <activity android:name=".ui.mine.activity.order.OrderActivity"/>
+        <activity android:name=".ui.mine.activity.order.OrderDetialActivity"/>
     </application>
 
 </manifest>

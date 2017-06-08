@@ -10,8 +10,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jaydenxiao.common.baseapp.AppManager;
 import com.shouba.shouba.R;
-import com.shouba.shouba.ui.main.activity.MainActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -70,7 +70,8 @@ public class HeightAndWeightActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_personal_data_heightandweight);
-
+        // 把actvity放到application栈中管理
+        AppManager.getAppManager().addActivity(this);
         ButterKnife.bind(this);  //依赖注入
 
         init();
@@ -124,8 +125,8 @@ public class HeightAndWeightActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_choose_next)
     void onChooseResultClick() {
-        Toast.makeText(this, "选择,身高： " + mHeight + " 体重： " + mWeight, Toast.LENGTH_LONG).show();
-        MainActivity.startAction(HeightAndWeightActivity.this);
+        Toast.makeText(this, "选择,身高： " + mHeight + " 体重： " + mWeight, Toast.LENGTH_SHORT).show();
+        LivingHabitsActivity.startAction(HeightAndWeightActivity.this);
     }
 
 

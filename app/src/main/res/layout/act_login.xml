@@ -35,7 +35,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
-                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
                 app:cardCornerRadius="6dp"
                 app:cardElevation="3dp"
                 app:cardUseCompatPadding="true">
@@ -179,10 +179,49 @@
                 android:layout_alignTop="@+id/cv"
                 android:layout_marginEnd="-20dp"
                 android:layout_marginTop="25dp"
-                android:src="@drawable/ic_add"
+                android:src="@mipmap/register"
                 android:transitionName="loginFab"
                 app:fabSize="normal"
                  />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/cv"
+                android:layout_marginTop="@dimen/activity_vertical_margin">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="其他登录方式"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:textSize="@dimen/font_normal2"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/activity_vertical_margin">
+                    <ImageView
+                        android:id="@+id/login_qq"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/login_qq"/>
+                    <ImageView
+                        android:layout_weight="1"
+                        android:id="@+id/login_weixin"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@mipmap/login_weixin"/>
+                    <ImageView
+                        android:layout_weight="1"
+                        android:id="@+id/login_weibo"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@mipmap/login_weibo"/>
+                </LinearLayout>
+            </LinearLayout>
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>
 

@@ -51,6 +51,7 @@
     <string name="setting">设置</string>
     <string name="user_info">个人资料</string>
     <string name="set_personal_data">个人资料设定</string>
+
     <string name="mine_main_title">我的</string>
     <string name="female">女</string>
     <string name="male">男</string>
@@ -70,6 +71,42 @@
     <string name="get_register_code">获取验证码</string>
     <string name="height">身高</string>
 
+    <!-- 个人资料 -->
+    <string name="personal_data">个人资料</string>
+    <string name="personal_avatar">头像</string>
+    <string name="personal_sex">性别</string>
+    <string name="personal_height">身高</string>
+    <string name="personal_birthday">出生日期</string>
+    <string name="personal_init_weight">初始体重</string>
+    <string name="personal_goal_weight">目标体重</string>
+    <string name="personal_identity">身份</string>
+    <string name="personal_address">现居地</string>
+    <string name="personal_default_sex">男</string>
+    <string name="personal_default_height">177cm</string>
+    <string name="personal_default_birthday">1994.1.1</string>
+    <string name="personal_default_init_weight">70kg</string>
+    <string name="personal_default_goal_weight">50kg</string>
+    <string name="personal_default_identity">上班族</string>
+    <string name="personal_default_address">太原</string>
 
-
+    <!-- 订单 -->
+    <string name="orders_shop_name">高新店</string>
+    <string name="orders_name">订单名称</string>
+    <string name="orders_money">￥666.0</string>
+    <string name="orders_total">合计：</string>
+    <string name="orders_total_money">￥666.0</string>
+    <string name="orders_delete">删除</string>
+    <string name="orders_share">分享</string>
+    <string name="orders_protocols">订单协议</string>
+    <string name="orders_detail">订单详情</string>
+    <string name="orders_success">交易成功</string>
+    <string name="orders_id">订单号：</string>
+    <string name="orders_time">创建时间：</string>
+    <string name="pay_time">付款时间：</string>
+    <string name="success_time">成交时间：</string>
+    <string name="contract_info">合同信息</string>
+    <string name="contract_notification">客户告知书</string>
+    <!-- 消息 -->
+    <string name="my_news">我的消息</string>
+    <string name="add_weight">涨称</string>
 </resources>

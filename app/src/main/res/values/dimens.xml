@@ -11,7 +11,7 @@
     <dimen name="cardview_cardElevation">2dp</dimen>
     <dimen name="viewpadding_width">12dp</dimen>
     <dimen name="viewpadding">6dp</dimen>
-    <dimen name="viewmargin">100dp</dimen>
+    <dimen name="viewmargin">70dp</dimen>
 
     <!-- 服务 -->
     <dimen name="fuwu_pic_width">70dp</dimen>

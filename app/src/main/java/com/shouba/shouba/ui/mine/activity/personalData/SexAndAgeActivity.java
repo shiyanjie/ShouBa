@@ -13,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.jaydenxiao.common.baseapp.AppManager;
 import com.shouba.shouba.R;
 
 import butterknife.Bind;
@@ -63,7 +64,8 @@ public class SexAndAgeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_personal_data_sexeandage);
-
+        // 把actvity放到application栈中管理
+        AppManager.getAppManager().addActivity(this);
         JDateTime now = new JDateTime();
         mMaxAge = now.getYear();
         mAge = mMaxAge - 18;
@@ -97,7 +99,7 @@ public class SexAndAgeActivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_choose_next)
     public void onViewClicked() {
-        Toast.makeText(this, "选择,性别： " + "男" + " 出生年： " + mAge, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "选择,性别： " + "男" + " 出生年： " + mAge, Toast.LENGTH_SHORT).show();
         HeightAndWeightActivity.startAction(SexAndAgeActivity.this);
     }
 
