@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.jaydenxiao.common.base.BaseFragment;
 import com.shouba.shouba.R;
+import com.shouba.shouba.ui.mine.activity.order.OrderActivity;
 import com.shouba.shouba.ui.mine.activity.personalData.PersonalDataShowActivity;
 
 import butterknife.Bind;
@@ -100,6 +101,7 @@ public class MineMainFragment extends BaseFragment {
             case R.id.ll_daynight_jianzhongmubiao:
                 break;
             case R.id.ll_daynight_dingdan:
+                startActivity(OrderActivity.class);
                 break;
             case R.id.ll_daynight_shezhi:
                 break;
