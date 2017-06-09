@@ -50,7 +50,7 @@ public class ServiceMainFragment extends BaseFragment {
 
     @Override
     public void initView() {
-
+        toolbar.setTitle(R.string.service_main_title);
     }
 
 

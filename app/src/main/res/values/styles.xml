@@ -17,4 +17,9 @@
         <item name="android:layout_marginRight">4dp</item>
         <item name="android:layout_marginTop">15dp</item>
     </style>
+
+    <style name="NoSpaceActionBarTheme" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
 </resources>

@@ -3,10 +3,9 @@ package com.shouba.shouba.ui.mine.activity.personalData;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +17,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import scaleruler.utils.DrawUtil;
 import scaleruler.view.DecimalScaleRulerView;
-import scaleruler.view.ScaleRulerView;
 
 
 /**
@@ -28,10 +26,10 @@ import scaleruler.view.ScaleRulerView;
 
 public class HeightAndWeightActivity extends AppCompatActivity {
 
-    @Bind(R.id.scaleWheelView_height)
-    ScaleRulerView mHeightWheelView;
-    @Bind(R.id.tv_user_height_value)
-    TextView mHeightValue;
+//    @Bind(R.id.scaleWheelView_height)
+//    ScaleRulerView mHeightWheelView;
+//    @Bind(R.id.tv_user_height_value)
+//    TextView mHeightValue;
 
     @Bind(R.id.scaleWheelView_weight)
     DecimalScaleRulerView mWeightWheelView;
@@ -46,14 +44,14 @@ public class HeightAndWeightActivity extends AppCompatActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
 
-    private float mHeight = 170;
-    private float mMaxHeight = 220;
-    private float mMinHeight = 100;
+    private float mHeight = 170.0f;
+    private float mMaxHeight = 220.0f;
+    private float mMinHeight = 100.0f;
 
 
     private float mWeight = 60.0f;
-    private float mMaxWeight = 200;
-    private float mMinWeight = 25;
+    private float mMaxWeight = 200.0f;
+    private float mMinWeight = 25.0f;
 
     /**
      * 入口
@@ -62,8 +60,6 @@ public class HeightAndWeightActivity extends AppCompatActivity {
     public static void startAction(Activity activity){
         Intent intent = new Intent(activity, HeightAndWeightActivity.class);
         activity.startActivity(intent);
-        activity.overridePendingTransition(R.anim.fade_in,
-                R.anim.fade_out);
     }
 
     @Override
@@ -78,32 +74,25 @@ public class HeightAndWeightActivity extends AppCompatActivity {
     }
 
     private void init() {
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null){
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
-        mHeightValue.setText((int) mHeight + "");
-        mWeightValue.setText(mWeight + "kg");
-        mWeightValueTwo.setText(mWeight + "kg");
-
-        mHeightWheelView.initViewParam(mHeight, mMaxHeight, mMinHeight);
-        mHeightWheelView.setValueChangeListener(new ScaleRulerView.OnValueChangeListener() {
+        toolbar.setTitle(R.string.set_personal_data);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onValueChange(float value) {
-                mHeightValue.setText((int) value + "");
-                mHeight = value;
+            public void onClick(View v) {
+                finish();
             }
         });
 
+        mWeightValue.setText((int) mHeight + "cm");
+        mWeightValueTwo.setText(mWeight + "kg");
+
         mWeightWheelView.setParam(DrawUtil.dip2px(10), DrawUtil.dip2px(32), DrawUtil.dip2px(24),
                 DrawUtil.dip2px(14), DrawUtil.dip2px(9), DrawUtil.dip2px(12));
-        mWeightWheelView.initViewParam(mWeight, 20.0f, 200.0f, 1);
+        mWeightWheelView.initViewParam(mHeight, mMinHeight, mMaxHeight, 10);
         mWeightWheelView.setValueChangeListener(new DecimalScaleRulerView.OnValueChangeListener() {
             @Override
             public void onValueChange(float value) {
-                mWeightValueTwo.setText(value + "kg");
+                mWeightValue.setText((int) value + "cm");
 
                 mWeight = value;
             }
@@ -112,7 +101,7 @@ public class HeightAndWeightActivity extends AppCompatActivity {
 
         mWeightRulerView.setParam(DrawUtil.dip2px(10), DrawUtil.dip2px(32), DrawUtil.dip2px(24),
                 DrawUtil.dip2px(14), DrawUtil.dip2px(9), DrawUtil.dip2px(12));
-        mWeightRulerView.initViewParam(mWeight, 20.0f, 200.0f, 1);
+        mWeightRulerView.initViewParam(mWeight, mMinWeight, mMaxWeight, 1);
         mWeightRulerView.setValueChangeListener(new DecimalScaleRulerView.OnValueChangeListener() {
             @Override
             public void onValueChange(float value) {
@@ -135,16 +124,5 @@ public class HeightAndWeightActivity extends AppCompatActivity {
         super.onDestroy();
         ButterKnife.unbind(this);
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:
-                finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 
 }

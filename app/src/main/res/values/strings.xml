@@ -71,6 +71,9 @@
     <string name="get_register_code">获取验证码</string>
     <string name="height">身高</string>
 
+    <string name="welcomeLogin">欢迎登录瘦吧App</string>
+    <string name="welcomeRegister">欢迎注册瘦吧App</string>
+
     <!-- 个人资料 -->
     <string name="personal_data">个人资料</string>
     <string name="personal_avatar">头像</string>
@@ -109,4 +112,6 @@
     <!-- 消息 -->
     <string name="my_news">我的消息</string>
     <string name="add_weight">涨称</string>
+    <string name="myOrder">我的订单</string>
+
 </resources>

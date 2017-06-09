@@ -5,13 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/toolBarSize"
-        android:background="@color/main_color"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="@string/home_main_title" />
+    <include layout="@layout/toolbar_no_back" />
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"

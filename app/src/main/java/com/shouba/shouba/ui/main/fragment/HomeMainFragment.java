@@ -81,6 +81,7 @@ public class HomeMainFragment extends BaseFragment {
 
     @Override
     public void initView() {
+        toolbar.setTitle(R.string.home_main_title);
         JDateTime dateTime = new JDateTime();
         tvTizhongLishi.setText(dateTime.getMonth() + "月" + dateTime.getDayOfMonth() + "日");
     }

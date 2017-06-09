@@ -64,7 +64,7 @@ public class MineMainFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-
+        toolbar.setTitle(R.string.mine_main_title);
     }
 
     @Override

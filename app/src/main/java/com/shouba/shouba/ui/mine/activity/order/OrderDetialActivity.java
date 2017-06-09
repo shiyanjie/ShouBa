@@ -1,7 +1,7 @@
 package com.shouba.shouba.ui.mine.activity.order;
 
-import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.jaydenxiao.common.base.BaseActivity;
 import com.shouba.shouba.R;
@@ -32,12 +32,16 @@ public class OrderDetialActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        toolbar.setTitle(R.string.orders_detail);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
+
 
     @Override
     protected void onResume() {

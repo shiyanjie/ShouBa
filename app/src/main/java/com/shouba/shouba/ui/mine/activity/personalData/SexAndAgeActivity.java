@@ -3,10 +3,9 @@ package com.shouba.shouba.ui.mine.activity.personalData;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,7 +19,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import jodd.datetime.JDateTime;
-import scaleruler.view.ScaleRulerView;
+import scaleruler.utils.DrawUtil;
+import scaleruler.view.DecimalScaleRulerView;
 
 /**
  * Created by zoubo on 16/3/16.
@@ -38,12 +38,12 @@ public class SexAndAgeActivity extends AppCompatActivity {
     RadioButton rbFemale;
     @Bind(R.id.rg_sex)
     RadioGroup rgSex;
+    @Bind(R.id.btn_choose_next)
+    Button btnChooseNext;
     @Bind(R.id.tv_user_age_value)
     TextView tvUserAgeValue;
     @Bind(R.id.scaleWheelView_age)
-    ScaleRulerView scaleWheelViewAge;
-    @Bind(R.id.btn_choose_next)
-    Button btnChooseNext;
+    DecimalScaleRulerView scaleWheelViewAge;
 
     private float mAge;
     private float mMaxAge;
@@ -51,13 +51,14 @@ public class SexAndAgeActivity extends AppCompatActivity {
 
     /**
      * 入口
+     *
      * @param activity
      */
-    public static void startAction(Activity activity){
+    public static void startAction(Activity activity) {
         Intent intent = new Intent(activity, SexAndAgeActivity.class);
         activity.startActivity(intent);
-        activity.overridePendingTransition(R.anim.fade_in,
-                R.anim.fade_out);
+//        activity.overridePendingTransition(R.anim.fade_in,
+//                R.anim.fade_out);
     }
 
     @Override
@@ -67,7 +68,7 @@ public class SexAndAgeActivity extends AppCompatActivity {
         // 把actvity放到application栈中管理
         AppManager.getAppManager().addActivity(this);
         JDateTime now = new JDateTime();
-        mMaxAge = now.getYear();
+        mMaxAge = (float) now.getYear();
         mAge = mMaxAge - 18;
         mMinAge = mMaxAge - 80;
 
@@ -77,24 +78,28 @@ public class SexAndAgeActivity extends AppCompatActivity {
     }
 
     private void init() {
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
-        tvUserAgeValue.setText((int) mAge + "");
-
-        scaleWheelViewAge.initViewParam(mAge, mMaxAge, mMinAge);
-        scaleWheelViewAge.setValueChangeListener(new ScaleRulerView.OnValueChangeListener() {
+        toolbar.setTitle(R.string.set_personal_data);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onValueChange(float value) {
-                tvUserAgeValue.setText((int) value + "");
-                mAge = value;
+            public void onClick(View v) {
+                finish();
             }
         });
 
+        tvUserAgeValue.setText((int) mAge+ "cm");
 
+        scaleWheelViewAge.setParam(DrawUtil.dip2px(10), DrawUtil.dip2px(32), DrawUtil.dip2px(24),
+                DrawUtil.dip2px(14), DrawUtil.dip2px(9), DrawUtil.dip2px(12));
+        scaleWheelViewAge.initViewParam(mAge, mMinAge, mMaxAge, 10);
+        scaleWheelViewAge.setValueChangeListener(new DecimalScaleRulerView.OnValueChangeListener() {
+            @Override
+            public void onValueChange(float value) {
+                tvUserAgeValue.setText((int) value + "");
+
+                mAge = value;
+            }
+        });
     }
 
     @OnClick(R.id.btn_choose_next)
@@ -108,15 +113,5 @@ public class SexAndAgeActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         ButterKnife.unbind(this);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:
-                finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

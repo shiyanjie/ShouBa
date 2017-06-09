@@ -9,13 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/toolBarSize"
-        android:background="@color/main_color"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:title="@string/mine_main_title" />
+
+        <include layout="@layout/toolbar_no_back" />
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
@@ -56,8 +51,7 @@
                         android:gravity="end"
                         android:text="@string/user_info"
                         android:textColor="?attr/dayNightTwoTextColor"
-                        android:textSize="@dimen/font_normal3"
-                        />
+                        android:textSize="@dimen/font_normal3" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
 

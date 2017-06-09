@@ -3,11 +3,10 @@ package com.shouba.shouba.ui.mine.activity.personalData;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.jackuhan.flowlayouttags.FlowlayoutTags;
@@ -43,8 +42,8 @@ public class LivingHabitsActivity extends AppCompatActivity {
     public static void startAction(Activity activity){
         Intent intent = new Intent(activity, LivingHabitsActivity.class);
         activity.startActivity(intent);
-        activity.overridePendingTransition(R.anim.fade_in,
-                R.anim.fade_out);
+//        activity.overridePendingTransition(R.anim.fade_in,
+//                R.anim.fade_out);
     }
 
     @Override
@@ -59,11 +58,15 @@ public class LivingHabitsActivity extends AppCompatActivity {
     }
 
     private void init() {
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null){
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        toolbar.setTitle(R.string.set_personal_data);
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         this.flred2 = (FlowlayoutTags) findViewById(R.id.fl_red2);
         final List<String> list = new ArrayList<String>();
         list.add("饮食油腻");
@@ -118,16 +121,5 @@ public class LivingHabitsActivity extends AppCompatActivity {
         super.onDestroy();
         ButterKnife.unbind(this);
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case android.R.id.home:
-                finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
 
 }

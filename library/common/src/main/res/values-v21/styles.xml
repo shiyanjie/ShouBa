@@ -27,6 +27,9 @@
     <!--冷启动界面-->
     <style name="AppTheme.Launcher" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/main_color</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
     <!--白天主题，此处直接和AppTheme一样-->
@@ -40,6 +43,10 @@
         <item name="dayNightTwoTextColor">@color/day_two_text_color</item>
         <item name="dayNightThreeTextColor">@color/day_three_text_color</item>
         <item name="dayNightBackgroundDrawable">@color/day_backgroup_color</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <!-- Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色 -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- 设置activity切换动画 -->
         <item name="android:windowAnimationStyle">@style/FeelyouWindowAnimTheme</item>
     </style>
@@ -83,6 +90,5 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
         <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
     </style>
-
 
 </resources>

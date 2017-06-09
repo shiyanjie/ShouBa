@@ -1,304 +1,307 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clipToPadding="true">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/toolBarSize"
-            android:background="@color/main_color"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:title="@string/personal_data" />
+        <include layout="@layout/toolbar" />
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v7.widget.CardView
-        style="@style/news_summary_card_view"
-        android:background="@drawable/selector_gray_deepgray"
-        app:cardElevation="@dimen/cardview_cardElevation">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
-            android:id="@+id/avatar"
             android:layout_width="match_parent"
-            android:layout_height="106dp"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/viewpadding_width"
-            android:paddingTop="@dimen/viewpadding_width">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:text="@string/personal_avatar"
-                android:textColor="?attr/dayNightTwoTextColor" />
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
 
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:src="@drawable/shoubabang2" />
+                <LinearLayout
+                    android:id="@+id/avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="106dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:textColor="?attr/dayNightTwoTextColor"
+                        android:text="@string/personal_avatar" />
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/shoubabang2" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/sex_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:textColor="?attr/dayNightTwoTextColor"
+                        android:text="@string/personal_sex" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="0.20"
+                        android:text="@string/personal_default_sex" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/height_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:textColor="?attr/dayNightTwoTextColor"
+                        android:text="@string/personal_height" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="0.12"
+                        android:text="@string/personal_default_height" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/birthday_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:textColor="?attr/dayNightTwoTextColor"
+                        android:text="@string/personal_birthday" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="0.08"
+                        android:text="@string/personal_default_birthday" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/init_weight_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:textColor="?attr/dayNightTwoTextColor"
+                        android:text="@string/personal_init_weight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="0.16"
+                        android:text="@string/personal_default_init_weight" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/goal_weight_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:textColor="?attr/dayNightTwoTextColor"
+                        android:text="@string/personal_goal_weight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="0.17"
+                        android:text="@string/personal_default_goal_weight" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/sex_identity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:textColor="?attr/dayNightTwoTextColor"
+                        android:text="@string/personal_identity" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="0.10"
+                        android:text="@string/personal_default_identity" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/living_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:textColor="?attr/dayNightTwoTextColor"
+                        android:text="@string/personal_address" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="0.15"
+                        android:text="@string/personal_default_address" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        style="@style/news_summary_card_view"
-        android:background="@drawable/selector_gray_deepgray"
-        app:cardElevation="@dimen/cardview_cardElevation">
+    </android.support.v4.widget.NestedScrollView>
 
-        <LinearLayout
-            android:id="@+id/sex_show"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/viewpadding_width"
-            android:paddingTop="@dimen/viewpadding_width">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:text="@string/personal_sex"
-                android:textColor="?attr/dayNightTwoTextColor" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:text="@string/personal_default_sex"
-                android:textColor="?attr/dayNightTwoTextColor"
-                android:layout_weight="0.20" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        style="@style/news_summary_card_view"
-        android:background="@drawable/selector_gray_deepgray"
-        app:cardElevation="@dimen/cardview_cardElevation">
-
-        <LinearLayout
-            android:id="@+id/height_show"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/viewpadding_width"
-            android:paddingTop="@dimen/viewpadding_width">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:text="@string/personal_height"
-                android:textColor="?attr/dayNightTwoTextColor" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:text="@string/personal_default_height"
-                android:textColor="?attr/dayNightTwoTextColor"
-                android:layout_weight="0.12" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        style="@style/news_summary_card_view"
-        android:background="@drawable/selector_gray_deepgray"
-        app:cardElevation="@dimen/cardview_cardElevation">
-
-        <LinearLayout
-            android:id="@+id/birthday_show"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/viewpadding_width"
-            android:paddingTop="@dimen/viewpadding_width">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:text="@string/personal_birthday"
-                android:textColor="?attr/dayNightTwoTextColor" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:text="@string/personal_default_birthday"
-                android:textColor="?attr/dayNightTwoTextColor"
-                android:layout_weight="0.08" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        style="@style/news_summary_card_view"
-        android:background="@drawable/selector_gray_deepgray"
-        app:cardElevation="@dimen/cardview_cardElevation">
-
-        <LinearLayout
-            android:id="@+id/init_weight_show"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/viewpadding_width"
-            android:paddingTop="@dimen/viewpadding_width">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:text="@string/personal_init_weight"
-                android:textColor="?attr/dayNightTwoTextColor" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:text="@string/personal_default_init_weight"
-                android:textColor="?attr/dayNightTwoTextColor"
-                android:layout_weight="0.16" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        style="@style/news_summary_card_view"
-        android:background="@drawable/selector_gray_deepgray"
-        app:cardElevation="@dimen/cardview_cardElevation">
-
-        <LinearLayout
-            android:id="@+id/goal_weight_show"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/viewpadding_width"
-            android:paddingTop="@dimen/viewpadding_width">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:text="@string/personal_goal_weight"
-                android:textColor="?attr/dayNightTwoTextColor" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:text="@string/personal_default_goal_weight"
-                android:textColor="?attr/dayNightTwoTextColor"
-                android:layout_weight="0.17" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        style="@style/news_summary_card_view"
-        android:background="@drawable/selector_gray_deepgray"
-        app:cardElevation="@dimen/cardview_cardElevation">
-
-        <LinearLayout
-            android:id="@+id/sex_identity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/viewpadding_width"
-            android:paddingTop="@dimen/viewpadding_width">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:text="@string/personal_identity"
-                android:textColor="?attr/dayNightTwoTextColor" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:text="@string/personal_default_identity"
-                android:textColor="?attr/dayNightTwoTextColor"
-                android:layout_weight="0.10" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        style="@style/news_summary_card_view"
-        android:background="@drawable/selector_gray_deepgray"
-        app:cardElevation="@dimen/cardview_cardElevation">
-
-        <LinearLayout
-            android:id="@+id/living_show"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:paddingBottom="@dimen/viewpadding_width"
-            android:paddingTop="@dimen/viewpadding_width">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_weight="1"
-                android:text="@string/personal_address"
-                android:textColor="?attr/dayNightTwoTextColor" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:text="@string/personal_default_address"
-                android:textColor="?attr/dayNightTwoTextColor"
-                android:layout_weight="0.15" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
