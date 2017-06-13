@@ -138,6 +138,9 @@ public class HomeMainFragment extends BaseFragment {
                 minDate.set(1992, 9, 1);
                 dialog.setMinDate(minDate);
                 dialog.vibrate(true);
+                dialog.setThemeDark(true);
+                dialog.setAccentColor(getResources().getColor(R.color.main_color));
+                dialog.setVersion(DatePickerDialog.Version.VERSION_2);
 
                 dialog.show(getActivity().getFragmentManager(), "DatePickerDialog");
                 break;
