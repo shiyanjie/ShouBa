@@ -50,7 +50,7 @@ public class ServiceMainFragment extends BaseFragment {
 
     @Override
     public void initView() {
-        toolbar.setTitle(R.string.service_main_title);
+        toolbar.setTitle(R.string.to_store_service);
     }
 
 
@@ -66,6 +66,9 @@ public class ServiceMainFragment extends BaseFragment {
         switch (item.getItemId()){
             case R.id.message:
                 Toast.makeText(getActivity(), "点击了消息", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.add:
+                Toast.makeText(getActivity(), "点击了添加", Toast.LENGTH_SHORT).show();
                 break;
             default:
         }
