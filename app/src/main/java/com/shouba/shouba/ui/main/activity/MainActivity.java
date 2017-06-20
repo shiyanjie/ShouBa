@@ -22,6 +22,7 @@ import com.shouba.shouba.app.AppConstant;
 import com.shouba.shouba.bean.TabEntity;
 import com.shouba.shouba.ui.main.fragment.HomeMainFragment;
 import com.shouba.shouba.ui.main.fragment.MineMainFragment;
+import com.shouba.shouba.ui.main.fragment.RecordMainFragment;
 import com.shouba.shouba.ui.main.fragment.ServiceMainFragment;
 import com.shouba.shouba.ui.main.fragment.ShouBaMainFragment;
 
@@ -40,15 +41,17 @@ public class MainActivity extends BaseActivity {
     @Bind(R.id.tab_layout)
     CommonTabLayout tabLayout;
 
-    private String[] mTitles = {"首页", "瘦吧","服务","我的"};
+    private String[] mTitles = {"首页", "记录", "瘦吧", "服务", "我的"};
     private int[] mIconUnselectIds = {
             R.mipmap.icon_shouye,
+            R.mipmap.icon_record,
             R.mipmap.icon_pengyouquan,
             R.mipmap.icon_fuwu,
             //R.mipmap.icon_shangcheng,
             R.mipmap.icon_wode};
     private int[] mIconSelectIds = {
             R.mipmap.icon_shouye_selected,
+            R.mipmap.icon_record_selector,
             R.mipmap.icon_pengyouquan_selected,
             R.mipmap.icon_fuwu_selector,
             //R.mipmap.icon_shangcheng_selected,
@@ -56,6 +59,7 @@ public class MainActivity extends BaseActivity {
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
 
     private HomeMainFragment homeMainFragment;
+    private RecordMainFragment recordMainFragment;
     private ShouBaMainFragment shoubaMainFragment;
     private ServiceMainFragment serviceMainFragment;
     //private StoreMainFragment storeMainFragment;
@@ -64,9 +68,10 @@ public class MainActivity extends BaseActivity {
 
     /**
      * 入口
+     *
      * @param activity
      */
-    public static void startAction(Activity activity){
+    public static void startAction(Activity activity) {
         Intent intent = new Intent(activity, MainActivity.class);
         activity.startActivity(intent);
         activity.overridePendingTransition(R.anim.fade_in,
@@ -82,18 +87,20 @@ public class MainActivity extends BaseActivity {
     public void initPresenter() {
 
     }
+
     @Override
     public void initView() {
         //初始化菜单
         initTab();
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //初始化frament
         initFragment(savedInstanceState);
-        tabLayout.measure(0,0);
-        tabLayoutHeight=tabLayout.getMeasuredHeight();
+        tabLayout.measure(0, 0);
+        tabLayoutHeight = tabLayout.getMeasuredHeight();
         //监听菜单显示或隐藏
         mRxManager.on(AppConstant.MENU_SHOW_HIDE, new Action1<Boolean>() {
 
@@ -103,6 +110,7 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+
     /**
      * 初始化tab
      */
@@ -117,11 +125,13 @@ public class MainActivity extends BaseActivity {
             public void onTabSelect(int position) {
                 SwitchTo(position);
             }
+
             @Override
             public void onTabReselect(int position) {
             }
         });
     }
+
     /**
      * 初始化碎片
      */
@@ -130,19 +140,22 @@ public class MainActivity extends BaseActivity {
         int currentTabPosition = 0;
         if (savedInstanceState != null) {
             homeMainFragment = (HomeMainFragment) getSupportFragmentManager().findFragmentByTag("homeMainFragment");
+            recordMainFragment = (RecordMainFragment) getSupportFragmentManager().findFragmentByTag("recordMainFragment");
             shoubaMainFragment = (ShouBaMainFragment) getSupportFragmentManager().findFragmentByTag("shoubaMainFragment");
-            serviceMainFragment= (ServiceMainFragment) getSupportFragmentManager().findFragmentByTag("serviceMainFragment");
+            serviceMainFragment = (ServiceMainFragment) getSupportFragmentManager().findFragmentByTag("serviceMainFragment");
             //storeMainFragment = (StoreMainFragment) getSupportFragmentManager().findFragmentByTag("storeMainFragment");
             mineMainFragment = (MineMainFragment) getSupportFragmentManager().findFragmentByTag("mineMainFragment");
             currentTabPosition = savedInstanceState.getInt(AppConstant.HOME_CURRENT_TAB_POSITION);
         } else {
             homeMainFragment = new HomeMainFragment();
+            recordMainFragment = new RecordMainFragment();
             shoubaMainFragment = new ShouBaMainFragment();
             serviceMainFragment = new ServiceMainFragment();
             //storeMainFragment = new StoreMainFragment();
             mineMainFragment = new MineMainFragment();
 
             transaction.add(R.id.fl_body, homeMainFragment, "homeMainFragment");
+            transaction.add(R.id.fl_body, recordMainFragment, "recordMainFragment");
             transaction.add(R.id.fl_body, shoubaMainFragment, "shoubaMainFragment");
             transaction.add(R.id.fl_body, serviceMainFragment, "serviceMainFragment");
             //transaction.add(R.id.fl_body, storeMainFragment, "storeMainFragment");
@@ -166,23 +179,36 @@ public class MainActivity extends BaseActivity {
                 transaction.hide(serviceMainFragment);
                 //transaction.hide(storeMainFragment);
                 transaction.hide(mineMainFragment);
+                transaction.hide(recordMainFragment);
                 transaction.show(homeMainFragment);
                 transaction.commitAllowingStateLoss();
                 break;
-            //瘦吧
+            //记录
             case 1:
+                transaction.hide(shoubaMainFragment);
+                transaction.hide(serviceMainFragment);
+                //transaction.hide(storeMainFragment);
+                transaction.hide(mineMainFragment);
+                transaction.show(recordMainFragment);
+                transaction.hide(homeMainFragment);
+                transaction.commitAllowingStateLoss();
+                break;
+            //瘦吧
+            case 2:
                 transaction.hide(homeMainFragment);
                 transaction.hide(serviceMainFragment);
                 //transaction.hide(storeMainFragment);
                 transaction.hide(mineMainFragment);
+                transaction.hide(recordMainFragment);
                 transaction.show(shoubaMainFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             //服务
-            case 2:
+            case 3:
                 transaction.hide(homeMainFragment);
                 transaction.hide(shoubaMainFragment);
                 transaction.hide(mineMainFragment);
+                transaction.hide(recordMainFragment);
                 //transaction.hide(storeMainFragment);
                 transaction.show(serviceMainFragment);
                 transaction.commitAllowingStateLoss();
@@ -197,10 +223,11 @@ public class MainActivity extends BaseActivity {
 //                transaction.commitAllowingStateLoss();
 //                break;
             //我的
-            case 3:
+            case 4:
                 transaction.hide(homeMainFragment);
                 transaction.hide(serviceMainFragment);
                 transaction.hide(shoubaMainFragment);
+                transaction.hide(recordMainFragment);
                 //transaction.hide(storeMainFragment);
                 transaction.show(mineMainFragment);
                 transaction.commitAllowingStateLoss();
@@ -212,29 +239,30 @@ public class MainActivity extends BaseActivity {
 
     /**
      * 菜单显示隐藏动画
+     *
      * @param showOrHide
      */
-    private void startAnimation(boolean showOrHide){
+    private void startAnimation(boolean showOrHide) {
         final ViewGroup.LayoutParams layoutParams = tabLayout.getLayoutParams();
         ValueAnimator valueAnimator;
         ObjectAnimator alpha;
-        if(!showOrHide){
+        if (!showOrHide) {
             valueAnimator = ValueAnimator.ofInt(tabLayoutHeight, 0);
             alpha = ObjectAnimator.ofFloat(tabLayout, "alpha", 1, 0);
-        }else{
+        } else {
             valueAnimator = ValueAnimator.ofInt(0, tabLayoutHeight);
             alpha = ObjectAnimator.ofFloat(tabLayout, "alpha", 0, 1);
         }
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                layoutParams.height= (int) valueAnimator.getAnimatedValue();
+                layoutParams.height = (int) valueAnimator.getAnimatedValue();
                 tabLayout.setLayoutParams(layoutParams);
             }
         });
-        AnimatorSet animatorSet=new AnimatorSet();
+        AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.setDuration(500);
-        animatorSet.playTogether(valueAnimator,alpha);
+        animatorSet.playTogether(valueAnimator, alpha);
         animatorSet.start();
     }
 

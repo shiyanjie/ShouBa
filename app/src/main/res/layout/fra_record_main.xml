@@ -25,7 +25,8 @@
 
             <include
                 android:id="@+id/eat_tab"
-                layout="@layout/view_eat_tab" />
+                layout="@layout/view_eat_tab"
+                android:visibility="gone"/>
 
         </android.support.design.widget.AppBarLayout>
 
