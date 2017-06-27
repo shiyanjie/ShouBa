@@ -22,7 +22,6 @@ import com.shouba.shouba.app.AppConstant;
 import com.shouba.shouba.bean.TabEntity;
 import com.shouba.shouba.ui.main.fragment.HomeMainFragment;
 import com.shouba.shouba.ui.main.fragment.MineMainFragment;
-import com.shouba.shouba.ui.main.fragment.RecordMainFragment;
 import com.shouba.shouba.ui.main.fragment.ServiceMainFragment;
 import com.shouba.shouba.ui.main.fragment.ShouBaMainFragment;
 
@@ -41,25 +40,30 @@ public class MainActivity extends BaseActivity {
     @Bind(R.id.tab_layout)
     CommonTabLayout tabLayout;
 
-    private String[] mTitles = {"首页", "记录", "瘦吧", "服务", "我的"};
+    private String[] mTitles = {
+            "首页",
+            //"记录",
+            "服务",
+            "瘦吧",
+            "我的"};
     private int[] mIconUnselectIds = {
             R.mipmap.icon_shouye,
-            R.mipmap.icon_record,
-            R.mipmap.icon_pengyouquan,
+            //R.mipmap.icon_record,
             R.mipmap.icon_fuwu,
+            R.mipmap.icon_pengyouquan,
             //R.mipmap.icon_shangcheng,
             R.mipmap.icon_wode};
     private int[] mIconSelectIds = {
             R.mipmap.icon_shouye_selected,
-            R.mipmap.icon_record_selector,
-            R.mipmap.icon_pengyouquan_selected,
+            //R.mipmap.icon_record_selector,
             R.mipmap.icon_fuwu_selector,
+            R.mipmap.icon_pengyouquan_selected,
             //R.mipmap.icon_shangcheng_selected,
             R.mipmap.icon_wode_selected};
     private ArrayList<CustomTabEntity> mTabEntities = new ArrayList<>();
 
     private HomeMainFragment homeMainFragment;
-    private RecordMainFragment recordMainFragment;
+    //private RecordMainFragment recordMainFragment;
     private ShouBaMainFragment shoubaMainFragment;
     private ServiceMainFragment serviceMainFragment;
     //private StoreMainFragment storeMainFragment;
@@ -140,7 +144,7 @@ public class MainActivity extends BaseActivity {
         int currentTabPosition = 0;
         if (savedInstanceState != null) {
             homeMainFragment = (HomeMainFragment) getSupportFragmentManager().findFragmentByTag("homeMainFragment");
-            recordMainFragment = (RecordMainFragment) getSupportFragmentManager().findFragmentByTag("recordMainFragment");
+            //recordMainFragment = (RecordMainFragment) getSupportFragmentManager().findFragmentByTag("recordMainFragment");
             shoubaMainFragment = (ShouBaMainFragment) getSupportFragmentManager().findFragmentByTag("shoubaMainFragment");
             serviceMainFragment = (ServiceMainFragment) getSupportFragmentManager().findFragmentByTag("serviceMainFragment");
             //storeMainFragment = (StoreMainFragment) getSupportFragmentManager().findFragmentByTag("storeMainFragment");
@@ -148,14 +152,14 @@ public class MainActivity extends BaseActivity {
             currentTabPosition = savedInstanceState.getInt(AppConstant.HOME_CURRENT_TAB_POSITION);
         } else {
             homeMainFragment = new HomeMainFragment();
-            recordMainFragment = new RecordMainFragment();
+            //recordMainFragment = new RecordMainFragment();
             shoubaMainFragment = new ShouBaMainFragment();
             serviceMainFragment = new ServiceMainFragment();
             //storeMainFragment = new StoreMainFragment();
             mineMainFragment = new MineMainFragment();
 
             transaction.add(R.id.fl_body, homeMainFragment, "homeMainFragment");
-            transaction.add(R.id.fl_body, recordMainFragment, "recordMainFragment");
+            //transaction.add(R.id.fl_body, recordMainFragment, "recordMainFragment");
             transaction.add(R.id.fl_body, shoubaMainFragment, "shoubaMainFragment");
             transaction.add(R.id.fl_body, serviceMainFragment, "serviceMainFragment");
             //transaction.add(R.id.fl_body, storeMainFragment, "storeMainFragment");
@@ -179,18 +183,28 @@ public class MainActivity extends BaseActivity {
                 transaction.hide(serviceMainFragment);
                 //transaction.hide(storeMainFragment);
                 transaction.hide(mineMainFragment);
-                transaction.hide(recordMainFragment);
+                //transaction.hide(recordMainFragment);
                 transaction.show(homeMainFragment);
                 transaction.commitAllowingStateLoss();
                 break;
-            //记录
+//            //记录
+//            case 1:
+//                transaction.hide(shoubaMainFragment);
+//                transaction.hide(serviceMainFragment);
+//                //transaction.hide(storeMainFragment);
+//                transaction.hide(mineMainFragment);
+//                //transaction.show(recordMainFragment);
+//                transaction.hide(homeMainFragment);
+//                transaction.commitAllowingStateLoss();
+//                break;
+            //服务
             case 1:
-                transaction.hide(shoubaMainFragment);
-                transaction.hide(serviceMainFragment);
-                //transaction.hide(storeMainFragment);
-                transaction.hide(mineMainFragment);
-                transaction.show(recordMainFragment);
                 transaction.hide(homeMainFragment);
+                transaction.hide(shoubaMainFragment);
+                transaction.hide(mineMainFragment);
+                //transaction.hide(recordMainFragment);
+                //transaction.hide(storeMainFragment);
+                transaction.show(serviceMainFragment);
                 transaction.commitAllowingStateLoss();
                 break;
             //瘦吧
@@ -199,20 +213,11 @@ public class MainActivity extends BaseActivity {
                 transaction.hide(serviceMainFragment);
                 //transaction.hide(storeMainFragment);
                 transaction.hide(mineMainFragment);
-                transaction.hide(recordMainFragment);
+                //transaction.hide(recordMainFragment);
                 transaction.show(shoubaMainFragment);
                 transaction.commitAllowingStateLoss();
                 break;
-            //服务
-            case 3:
-                transaction.hide(homeMainFragment);
-                transaction.hide(shoubaMainFragment);
-                transaction.hide(mineMainFragment);
-                transaction.hide(recordMainFragment);
-                //transaction.hide(storeMainFragment);
-                transaction.show(serviceMainFragment);
-                transaction.commitAllowingStateLoss();
-                break;
+
 //            //商城
 //            case 3:
 //                transaction.hide(homeMainFragment);
@@ -223,11 +228,11 @@ public class MainActivity extends BaseActivity {
 //                transaction.commitAllowingStateLoss();
 //                break;
             //我的
-            case 4:
+            case 3:
                 transaction.hide(homeMainFragment);
                 transaction.hide(serviceMainFragment);
                 transaction.hide(shoubaMainFragment);
-                transaction.hide(recordMainFragment);
+                //transaction.hide(recordMainFragment);
                 //transaction.hide(storeMainFragment);
                 transaction.show(mineMainFragment);
                 transaction.commitAllowingStateLoss();

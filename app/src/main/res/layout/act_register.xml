@@ -196,7 +196,6 @@
                         android:layout_marginBottom="@dimen/activity_vertical_margin"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/bt_shape"
-                        android:stateListAnimator="@drawable/state_list_animator_z"
                         android:text="@string/register"
                         android:textColor="@color/label_text"
                         tools:targetApi="lollipop" />

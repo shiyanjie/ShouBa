@@ -10,6 +10,8 @@
     <string name="goal_weight">目标体重</string>
     <string name="Need_to_eat">需摄入</string>
     <string name="already_eat">已摄入</string>
+    <string name="Need_to_subtract">应减</string>
+    <string name="already_subtract">已减</string>
     <string name="The_Last_Record">上次记录</string>
     <string name="record">记录</string>
     <string name="Most_popular">人气最高</string>
@@ -31,6 +33,11 @@
     <!-- 记录 -->
     <string name="weidu">围度</string>
     <string name="period">生理期</string>
+    <string name="period_record">记录生理期</string>
+    <string name="weight_record">体脂称</string>
+    <string name="weidu_record">记录围度</string>
+    <string name="food_record">记录饮食</string>
+    <string name="workandrest">作息</string>
 
     <!-- 瘦吧 -->
     <string name="shouba_main_title">瘦吧</string>
@@ -44,6 +51,14 @@
     <string name="moulding">塑形</string>
     <string name="plaster">药贴</string>
     <string name="shouba_The_official_mall">瘦吧官方商城</string>
+
+    <string name="selectall">全选</string>
+    <string name="servicepersonal">服务人员</string>
+    <string name="remarks">备注</string>
+    <string name="abdomen">腹部</string>
+    <string name="arm">胳膊</string>
+    <string name="thigh">大腿</string>
+    <string name="shank">小腿</string>
 
 
     <!-- 我的 -->

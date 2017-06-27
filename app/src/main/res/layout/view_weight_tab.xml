@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ll_eat_tab"
+    android:id="@+id/ll_weight_tab"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/white"
@@ -74,7 +74,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/Need_to_eat"
+            android:text="@string/Need_to_subtract"
             android:textColor="?attr/dayNightTwoTextColor"
             android:textSize="@dimen/font_small" />
 
@@ -91,7 +91,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="@dimen/viewpadding"
                 android:gravity="center"
-                android:text="1800"
+                android:text="15"
                 android:textColor="@color/main_color"
                 android:textSize="@dimen/font_normal3"
                 android:textStyle="bold" />
@@ -103,7 +103,7 @@
                 android:layout_margin="2dp"
                 android:layout_toRightOf="@+id/tv_need_to_eat"
                 android:gravity="center"
-                android:text="k"
+                android:text="kg"
                 android:textColor="@color/main_color"
                 android:textSize="@dimen/font_small" />
         </RelativeLayout>
@@ -124,7 +124,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/already_eat"
+            android:text="@string/already_subtract"
             android:textColor="?attr/dayNightTwoTextColor"
             android:textSize="@dimen/font_small" />
         <RelativeLayout
@@ -140,7 +140,7 @@
             android:layout_marginTop="@dimen/viewpadding"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="1588"
+            android:text="2"
             android:textColor="@color/main_color"
             android:textSize="@dimen/font_normal3"
             android:textStyle="bold" />
@@ -151,7 +151,7 @@
                 android:layout_margin="2dp"
                 android:layout_toRightOf="@+id/tv_already_eat"
                 android:gravity="center"
-                android:text="k"
+                android:text="kg"
                 android:textColor="@color/main_color"
                 android:textSize="@dimen/font_small" />
 </RelativeLayout>

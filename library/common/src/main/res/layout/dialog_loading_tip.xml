@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="15dp"
-        android:textColor="?attr/dayNightOneTextColor"
+        android:textColor="?attr/dayNightTwoTextColor"
         android:textSize="@dimen/font_normal"
         android:text="加载中..." />
     <Button

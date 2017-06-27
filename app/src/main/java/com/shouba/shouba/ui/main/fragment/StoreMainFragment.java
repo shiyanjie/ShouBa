@@ -14,7 +14,8 @@ import butterknife.ButterKnife;
 
 
 /**
- * des:商城 主页   //暂不开放
+ * //暂不开放此页
+ * des:商城 主页
  * Created by syj
  * on 2017.05.04 13:26
  */
