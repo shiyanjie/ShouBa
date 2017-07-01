@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/viewpadding"
+                    android:layout_toLeftOf="@+id/tv_date"
+                    android:text="日期:"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="2017-7-1 14:34:34"
+                    android:textColor="?attr/dayNightThreeTextColor"
+                    android:textSize="@dimen/font_normal" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="姓名"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="性别"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner_gender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:entries="@array/gender"
+                        android:gravity="center_horizontal"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="手机号"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <EditText
+                        android:id="@+id/et_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="年龄"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <EditText
+                        android:id="@+id/et_age"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/line_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/viewpadding"
+                        android:layout_marginRight="@dimen/viewpadding"
+                        android:background="@color/bt_shape" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/viewpadding"
+                        android:text="岁"
+                        android:textColor="?attr/dayNightTwoTextColor" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="身高"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <EditText
+                        android:id="@+id/et_height"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/line_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/viewpadding"
+                        android:layout_marginRight="@dimen/viewpadding"
+                        android:background="@color/bt_shape" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/viewpadding"
+                        android:text="cm"
+                        android:textColor="?attr/dayNightTwoTextColor" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="体重"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/viewpadding"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+
+                    <EditText
+                        android:id="@+id/et_weight"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/line_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/viewpadding"
+                        android:layout_marginRight="@dimen/viewpadding"
+                        android:background="@color/bt_shape" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/viewpadding"
+                        android:text="斤"
+                        android:textColor="?attr/dayNightTwoTextColor" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="身份证号"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <EditText
+                        android:id="@+id/et_ID_number"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="生日"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <TextView
+                        android:id="@+id/tv_birthday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:text="2017-7-1"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/line_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/viewpadding"
+                        android:layout_marginRight="@dimen/viewpadding"
+                        android:background="@color/bt_shape" />
+
+                    <ImageView
+                        android:id="@+id/iv_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/ic_date" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="职业"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <EditText
+                        android:id="@+id/et_job"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="应减斤数"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/viewpadding"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+
+                    <EditText
+                        android:id="@+id/et_need_subtract_weight"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/line_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/viewpadding"
+                        android:layout_marginRight="@dimen/viewpadding"
+                        android:background="@color/bt_shape" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/viewpadding"
+                        android:text="斤"
+                        android:textColor="?attr/dayNightTwoTextColor" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="购买疗程"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner_course_of_treatment"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:entries="@array/course_of_treatment"
+                        android:gravity="center_horizontal"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="疗程数"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <EditText
+                        android:id="@+id/et_courseoftreatment_number"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="消费金额"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <EditText
+                        android:id="@+id/et_Consumption_money"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="进店方式"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/spinner_Way_into_the_shop"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:entries="@array/Way_into_the_shop"
+                        android:gravity="center_horizontal"
+                        android:overlapAnchor="false"
+                        android:spinnerMode="dropdown"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/inputSize"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_weight="1"
+                    android:text="联系地址"
+                    android:textColor="?attr/dayNightTwoTextColor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/viewpadding">
+
+                    <TextView
+                        android:id="@+id/tv_area_info"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:text="地区信息"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                    <View
+                        android:layout_width="@dimen/line_width"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/viewpadding"
+                        android:layout_marginRight="@dimen/viewpadding"
+                        android:background="@color/bt_shape" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/viewpadding"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_arrow_to" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/bt_shape"
+                    android:orientation="horizontal"
+                    >
+
+                    <EditText
+                        android:padding="@dimen/viewpadding_width"
+                        android:id="@+id/et_detailed_address"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:hint="详细地址：街道门牌信息"
+                        android:background="@null"
+                        android:textColor="?attr/dayNightThreeTextColor"
+                        android:textSize="@dimen/font_normal" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/main_color"
+                android:layout_marginTop="@dimen/viewpadding"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/viewpadding"
+                android:paddingLeft="@dimen/viewpadding"
+                android:paddingRight="@dimen/viewpadding"
+                android:paddingTop="@dimen/viewpadding"
+                android:text="上传侧面照"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_normal" />
+            <com.jaydenxiao.common.commonwidget.NoScrollGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_gad"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="10dp"
+                android:numColumns="3"
+                android:scrollbars="none"
+                android:verticalSpacing="6dp" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

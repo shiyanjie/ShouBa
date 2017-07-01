@@ -84,6 +84,7 @@
                         android:text="@string/personal_sex" />
 
                     <TextView
+                        android:gravity="right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -119,6 +120,7 @@
                         android:text="@string/personal_height" />
 
                     <TextView
+                        android:gravity="right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -154,6 +156,7 @@
                         android:text="@string/personal_birthday" />
 
                     <TextView
+                        android:gravity="right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -189,6 +192,7 @@
                         android:text="@string/personal_init_weight" />
 
                     <TextView
+                        android:gravity="right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -224,6 +228,7 @@
                         android:text="@string/personal_goal_weight" />
 
                     <TextView
+                        android:gravity="right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -259,6 +264,7 @@
                         android:text="@string/personal_identity" />
 
                     <TextView
+                        android:gravity="right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
@@ -295,6 +301,7 @@
                         android:text="@string/personal_address" />
 
                     <TextView
+                        android:gravity="right"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"

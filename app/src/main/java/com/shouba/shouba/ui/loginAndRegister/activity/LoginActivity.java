@@ -8,7 +8,6 @@ import android.os.Build;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -44,8 +43,6 @@ public class LoginActivity extends BaseActivity {
     TextInputLayout passwordWrapper;
     @Bind(R.id.bt_go)
     Button btGo;
-    //@Bind(R.id.cv)
-    //CardView cv;
     @Bind(R.id.fab)
     FloatingActionButton fab;
     @Bind(R.id.tv_forgot_password)
@@ -60,8 +57,6 @@ public class LoginActivity extends BaseActivity {
     ImageView loginWeixin;
     @Bind(R.id.login_weibo)
     ImageView loginWeibo;
-
-    UMAuthListener authListener;
 
     /**
      * 入口
@@ -90,9 +85,40 @@ public class LoginActivity extends BaseActivity {
         toolbar.setTitle(R.string.welcomeLogin);
     }
 
+    UMAuthListener authListener = new UMAuthListener() {
+        @Override
+        public void onStart(SHARE_MEDIA platform) {
+            toastSuccess("开始授权");
+        }
+
+        @Override
+        public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> data) {
+            String temp = "";
+            for (String key : data.keySet()) {
+                temp = temp + key + " : " + data.get(key) + "\n";
+            }
+            if (data!=null){
+
+                toastSuccess(temp);
+            }
+
+
+        }
+
+        @Override
+        public void onError(SHARE_MEDIA platform, int action, Throwable t) {
+            toastFail("错误" + t.getMessage());
+        }
+
+        @Override
+        public void onCancel(SHARE_MEDIA platform, int action) {
+            toastSuccess("取消授权");
+        }
+    };
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    @OnClick({R.id.bt_go, R.id.fab, R.id.tv_forgot_password, R.id.tv_try, R.id.login_qq, R.id.login_weixin, R.id.login_weibo})
+    @OnClick({R.id.bt_go, R.id.fab, R.id.tv_forgot_password, R.id.tv_try,
+            R.id.login_qq, R.id.login_weixin, R.id.login_weibo})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_go:
@@ -118,53 +144,22 @@ public class LoginActivity extends BaseActivity {
                 finish();
                 break;
             case R.id.login_qq:
-                SHARE_MEDIA share_media_qq = SHARE_MEDIA.QQ.toSnsPlatform().mPlatform;
+                SHARE_MEDIA share_media_qq =SHARE_MEDIA.QQ.toSnsPlatform().mPlatform;
                 UMShareAPI.get(LoginActivity.this).getPlatformInfo(LoginActivity.this, share_media_qq, authListener);
                 break;
             case R.id.login_weixin:
-                SHARE_MEDIA share_media_weixin = SHARE_MEDIA.WEIXIN.toSnsPlatform().mPlatform;
+                SHARE_MEDIA share_media_weixin =SHARE_MEDIA.WEIXIN.toSnsPlatform().mPlatform;
                 UMShareAPI.get(LoginActivity.this).getPlatformInfo(LoginActivity.this, share_media_weixin, authListener);
                 break;
             case R.id.login_weibo:
-                SHARE_MEDIA share_media_weibo = SHARE_MEDIA.SINA.toSnsPlatform().mPlatform;
+                SHARE_MEDIA share_media_weibo =SHARE_MEDIA.SINA.toSnsPlatform().mPlatform;
                 UMShareAPI.get(LoginActivity.this).getPlatformInfo(LoginActivity.this, share_media_weibo, authListener);
                 break;
         }
 
-        authListener = new UMAuthListener() {
-            @Override
-            public void onStart(SHARE_MEDIA platform) {
-                toastSuccess("开始授权");
-                Log.i("syj", "onStart: 开始授权");
-            }
-
-            @Override
-            public void onComplete(SHARE_MEDIA platform, int action, Map<String, String> data) {
-                String temp = "";
-                for (String key : data.keySet()) {
-                    temp = temp + key + " : " + data.get(key) + "\n";
-                }
-                if (data!=null){
-
-                    toastSuccess(temp);
-                }
-
-
-            }
-
-            @Override
-            public void onError(SHARE_MEDIA platform, int action, Throwable t) {
-                toastFail("错误" + t.getMessage());
-                Log.i("syj", "onError: 错误授权");
-            }
-
-            @Override
-            public void onCancel(SHARE_MEDIA platform, int action) {
-                toastSuccess("onCancel授权");
-            }
-        };
-
     }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

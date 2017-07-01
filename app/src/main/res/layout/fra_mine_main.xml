@@ -55,11 +55,128 @@
                         android:textSize="@dimen/font_normal3" />
                 </LinearLayout>
             </android.support.v7.widget.CardView>
-
             <android.support.v7.widget.CardView
                 style="@style/news_summary_card_view"
                 android:background="@drawable/selector_gray_deepgray"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/ll_advisory_reckon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@mipmap/icon_record_selector" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:text="咨询测算"
+                        android:textColor="?attr/dayNightTwoTextColor" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/ic_arrow_to" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/ll_Customer_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@mipmap/icon_record" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:text="顾客登记"
+                        android:textColor="?attr/dayNightTwoTextColor" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/ic_arrow_to" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
+                app:cardElevation="@dimen/cardview_cardElevation">
+
+                <LinearLayout
+                    android:id="@+id/ll_product_purchasing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/viewpadding_width"
+                    android:paddingTop="@dimen/viewpadding_width">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:src="@mipmap/icon_shangcheng_selected" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:text="产品购买"
+                        android:textColor="?attr/dayNightTwoTextColor" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:src="@drawable/ic_arrow_to" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                style="@style/news_summary_card_view"
+                android:background="@drawable/selector_gray_deepgray"
                 app:cardElevation="@dimen/cardview_cardElevation">
 
                 <LinearLayout

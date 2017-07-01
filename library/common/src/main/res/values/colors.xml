@@ -42,6 +42,7 @@
     <color name="toast_white">#ffffff</color>
     <color name="toast_stroke_gray">#99d4d4d4</color>
     <color name="umeng_divide">#d3d6d9</color>
+    <color name="bt_shape">#d1d1d1</color>
 
     <color name="alpha_02_white">#0AFFFFFF</color>
     <color name="alpha_05_white">#0DFFFFFF</color>

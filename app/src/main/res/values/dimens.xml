@@ -5,8 +5,10 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="toolBarSize">48dp</dimen>
     <dimen name="tabBarSize">40dp</dimen>
+    <dimen name="inputSize">40dp</dimen>
     <dimen name="icon">20dp</dimen>
     <dimen name="line_weight">41dp</dimen>
+    <dimen name="line_width">0.5dp</dimen>
 
 
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spingarr_servicepersonal">
+        <item>张三</item>
+        <item>李四</item>
+        <item>王五</item>
+        <item>赵六</item>
+    </string-array>
+
+    <string-array name="spingarr_morning_timequantum">
+        <item>6:00以前</item>
+        <item>6:00~6:30</item>
+        <item>6:30~7:00</item>
+        <item>7:00~7:30</item>
+        <item>7:30~8:00</item>
+        <item>8:00以后</item>
+    </string-array>
+
+    <string-array name="spingarr_noon_timequantum">
+        <item>15分钟以内</item>
+        <item>15~30分钟</item>
+        <item>30分钟以上</item>
+    </string-array>
+
+    <string-array name="spingarr_night_timequantum">
+        <item>10:00以前</item>
+        <item>10:00~10:30</item>
+        <item>10:30~11:00</item>
+        <item>11:00以后</item>
+    </string-array>
+
+    <string-array name="spingarr_weidu">
+        <item>腰围</item>
+        <item>胸围</item>
+        <item>臀围</item>
+        <item>胳膊围</item>
+        <item>大腿围</item>
+        <item>小腿围</item>
+    </string-array>
+
+
+</resources>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_advisory_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <android.support.v7.widget.CardView
+        style="@style/news_summary_card_view"
+        android:background="@drawable/selector_gray_deepgray"
+        app:cardElevation="@dimen/cardview_cardElevation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        android:text="接待登记"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputSize"
+        android:layout_marginTop="@dimen/viewpadding"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:text="接待人"
+            android:textColor="?attr/dayNightTwoTextColor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/bt_shape"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_receiver"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:entries="@array/receiver"
+                android:gravity="center_horizontal"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColor="?attr/dayNightThreeTextColor"
+                android:textSize="@dimen/font_normal" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputSize"
+        android:layout_marginTop="@dimen/viewpadding"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:text="顾客反映"
+            android:textColor="?attr/dayNightTwoTextColor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/bt_shape"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_consumer_appeal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:entries="@array/consumer_appeal"
+                android:gravity="center_horizontal"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColor="?attr/dayNightThreeTextColor"
+                android:textSize="@dimen/font_normal" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputSize"
+        android:layout_marginTop="@dimen/viewpadding"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:text="进店方式"
+            android:textColor="?attr/dayNightTwoTextColor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/bt_shape"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_Way_into_the_shop"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:entries="@array/Way_into_the_shop"
+                android:gravity="center_horizontal"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColor="?attr/dayNightThreeTextColor"
+                android:textSize="@dimen/font_normal" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputSize"
+        android:layout_marginTop="@dimen/viewpadding"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_weight="1"
+            android:text="顾客分类"
+            android:textColor="?attr/dayNightTwoTextColor" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@drawable/bt_shape"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner_customer_classification"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:entries="@array/customer_classification"
+                android:gravity="center_horizontal"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColor="?attr/dayNightThreeTextColor"
+                android:textSize="@dimen/font_normal" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

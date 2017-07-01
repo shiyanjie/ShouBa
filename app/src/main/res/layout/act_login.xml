@@ -206,7 +206,7 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_weight="1"
-                        android:src="@mipmap/login_qq"
+                        android:src="@drawable/selector_login_qq"
                         />
 
                     <ImageView
@@ -214,14 +214,14 @@
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_weight="1"
-                        android:src="@mipmap/login_weixin" />
+                        android:src="@drawable/selector_login_weixin" />
 
                     <ImageView
                         android:id="@+id/login_weibo"
                         android:layout_width="48dp"
                         android:layout_height="48dp"
                         android:layout_weight="1"
-                        android:src="@mipmap/login_weibo" />
+                        android:src="@drawable/selector_login_weibo" />
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

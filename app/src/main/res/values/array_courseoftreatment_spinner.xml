@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--疗程-->
+    <string-array name="course_of_treatment">
+        <item>标准疗程</item>
+        <item>单疗程</item>
+        <item>一疗程</item>
+    </string-array>
+    <string-array name="course_of_treatment_id">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

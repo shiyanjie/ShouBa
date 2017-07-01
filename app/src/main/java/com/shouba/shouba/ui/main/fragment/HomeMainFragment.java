@@ -1,5 +1,6 @@
 package com.shouba.shouba.ui.main.fragment;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
@@ -14,7 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jaydenxiao.common.base.BaseFragment;
+import com.jaydenxiao.common.commonwidget.LoadingDialog;
 import com.shouba.shouba.R;
+import com.shouba.shouba.app.AppApplication;
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.util.Calendar;
@@ -52,6 +55,8 @@ public class HomeMainFragment extends BaseFragment {
     @Bind(R.id.tv_locate)
     TextView tvLocate;
 
+    private static Dialog mLoadingDialog;
+
     private int mYear = Calendar.getInstance().get(Calendar.YEAR);
     private int mMonth = Calendar.getInstance().get(Calendar.MONTH);
     private int mDay = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
@@ -68,7 +73,14 @@ public class HomeMainFragment extends BaseFragment {
         super.onActivityCreated(savedInstanceState);
         //((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
         toolbar.inflateMenu(R.menu.toolbar);
-    }
+        if (!(mMonth+"-"+mDay).equals(AppApplication.instance().getDate())){//一天只提醒一次
+            LoadingDialog.showDialogForAwoke(getActivity(),"",false);//弹出减重排名提示框
+            AppApplication.instance().save(mMonth+"-"+mDay);//保存今天日期6-28
+        }
+
+
+
+}
 
     @Override
     protected int getLayoutResource() {
